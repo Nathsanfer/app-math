@@ -54,6 +54,16 @@ export default function Layout() {
                         ),
                     }}
                 />
+                <Drawer.Screen
+                    name="lorem"
+                    options={{
+                        drawerLabel: 'Lorem Ipsum',
+                        title: 'Gerador de Lorem Ipsum',
+                        drawerIcon: ({ size, color }) => (
+                            <Ionicons name="text" size={size} color={color} />
+                        ),
+                    }}
+                />
             </Drawer>
         </GestureHandlerRootView>
     );
