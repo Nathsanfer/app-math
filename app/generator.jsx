@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ImageBackground, View, Text, Button, TextInput } from "react-native";
+import { ImageBackground, View, Text, Button, TextInput, Clipboard, Alert } from "react-native";
+import Clipboard from "@react-native-clipboard/clipboard";
 
 export default function GeradorSenha() {
   const [senha, setSenha] = useState("");
@@ -22,6 +23,14 @@ export default function GeradorSenha() {
     setSenha(novaSenha);
   };
 
+  const copiarSenha = () => {
+    Clipboard.setString(senha);
+    Alert.alert(
+      "Senha copiada!",
+      "A senha foi copiada para a área de transferência."
+    );
+  };
+
   return (
     <ImageBackground
       source={require("../assets/image.png")}
@@ -33,6 +42,7 @@ export default function GeradorSenha() {
           value={senha}
           style={styles.input}
           placeholder="Senha gerada"
+          editable={false}
         />
         <TextInput
           value={tamanho}
@@ -47,6 +57,9 @@ export default function GeradorSenha() {
             onPress={() => gerarSenha(Number(tamanho))}
             color="#A0522D"
           />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button title="Copiar Senha" onPress={copiarSenha} color="#A0522D" />
         </View>
       </View>
     </ImageBackground>
@@ -85,5 +98,6 @@ const styles = {
     width: "80%",
     borderRadius: 20,
     overflow: "hidden",
+    marginBottom: 10,
   },
 };
