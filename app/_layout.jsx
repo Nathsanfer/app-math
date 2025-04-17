@@ -64,6 +64,16 @@ export default function Layout() {
                         ),
                     }}
                 />
+                <Drawer.Screen
+                    name="skeleton"
+                    options={{
+                        drawerLabel: 'Skeleton Loader',
+                        title: 'Carregamento Esqueleto',
+                        drawerIcon: ({ size, color }) => (
+                            <Ionicons name="layers" size={size} color={color} />
+                        ),
+                    }}
+                />
             </Drawer>
         </GestureHandlerRootView>
     );
