@@ -7,7 +7,7 @@ export default function Layout() {
         <GestureHandlerRootView style={{ flex: 1 }}>
             <Drawer
                 screenOptions={{
-                    drawerActiveTintColor: "#3a5a40", // Cor dos ícones ativos
+                    drawerActiveTintColor: "#f9a620", // Cor dos ícones ativos
                     drawerInactiveTintColor: "#666", // Cor dos ícones inativos
                     drawerStyle: {
                         backgroundColor: "#f5f5f5", // Cor de fundo do Drawer
@@ -40,7 +40,7 @@ export default function Layout() {
                         drawerLabel: 'Contador',
                         title: 'Contador',
                         drawerIcon: ({ size, color }) => (
-                            <Ionicons name="calculator" size={size} color={color} />
+                            <Ionicons name="stats-chart" size={size} color={color} />
                         ),
                     }}
                 />
@@ -50,7 +50,7 @@ export default function Layout() {
                         drawerLabel: 'Gerador',
                         title: 'Gerador',
                         drawerIcon: ({ size, color }) => (
-                            <Ionicons name="calculator" size={size} color={color} />
+                            <Ionicons name="construct" size={size} color={color} />
                         ),
                     }}
                 />
