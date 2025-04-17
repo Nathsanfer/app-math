@@ -4,6 +4,7 @@ export default function CountScreen() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Contador</Text>
+            <Text>oiii</Text>
         </View>
     );
 }
