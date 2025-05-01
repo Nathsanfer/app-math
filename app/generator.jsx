@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ImageBackground, View, Text, TouchableOpacity, Button, TextInput } from "react-native";
+import { ImageBackground, View, Text, TouchableOpacity, TextInput } from "react-native";
 import * as Clipboard from "expo-clipboard";
 
 export default function GeradorSenha() {
